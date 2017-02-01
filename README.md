@@ -1,1 +1,1 @@
-# Flappy-Bird-SFML-Clone
+# Flappy Bird SFML Clone
