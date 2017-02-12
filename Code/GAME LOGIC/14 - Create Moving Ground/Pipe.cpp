@@ -39,7 +39,7 @@ namespace Sonar
 
 	void Pipe::MovePipes(float dt)
 	{
-		for (unsigned short int i = 0; i < pipeSprites.size(); i++)
+		for ( int i = 0; i < pipeSprites.size(); i++)
 		{
 			if (pipeSprites.at(i).getPosition().x < 0 - pipeSprites.at(i).getLocalBounds().width)
 			{

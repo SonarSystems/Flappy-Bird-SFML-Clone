@@ -25,6 +25,16 @@ namespace Sonar
 		pipeSprites.push_back(sprite);
 	}
 
+	void Pipe::SpawnInvisiblePipe()
+	{
+		sf::Sprite sprite(this->_data->assets.GetTexture("Pipe Down"));
+
+		sprite.setPosition(this->_data->window.getSize().x, 0);
+		sprite.setColor(sf::Color(0, 0, 0, 0));
+
+		pipeSprites.push_back(sprite);
+	}
+
 	void Pipe::MovePipes(float dt)
 	{
 		for (unsigned short int i = 0; i < pipeSprites.size(); i++)
@@ -32,7 +42,7 @@ namespace Sonar
 			sf::Vector2f position = pipeSprites.at(i).getPosition();
 			float movement = PIPE_MOVEMENT_SPEED * dt;
 
-			pipeSprites.at(i).setPosition(position.x - movement, position.y);
+			pipeSprites.at(i).move(-movement, 0);
 		}
 	}
 
