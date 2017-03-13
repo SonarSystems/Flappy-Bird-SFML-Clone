@@ -30,4 +30,6 @@ int main()
 
 		window.display();
 	}
+	
+	return EXIT_SUCCESS;
 }
